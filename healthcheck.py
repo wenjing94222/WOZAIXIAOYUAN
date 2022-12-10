@@ -38,8 +38,8 @@ class WoZaiXiaoYuanPuncher(utils.Data):
 
     # 登录
     def login(self):
-        username, password = str(os.environ["WZXY_USERNAME"]), str(
-            os.environ["WZXY_PASSWORD"]
+        username, password = str(os.environ["USERNAME"]), str(
+            os.environ["PASSWORD"]
         )
         url = f"{self.loginUrl}?username={username}&password={password}"
         self.session = requests.session()
@@ -152,7 +152,7 @@ class WoZaiXiaoYuanPuncher(utils.Data):
             data = {
                 "msgtype": "text",
                 "text": {
-                    "content": f"""⏰ {os.environ["WZXY_USERNAME"]}的我在校园打卡结果通知\n---------\n打卡项目：健康打卡\n\n打卡情况：{notifyResult}\n\n打卡时间: {notifyTime}"""
+                    "content": f"""⏰ {os.environ["USERNAME"]}的我在校园打卡结果通知\n---------\n打卡项目：健康打卡\n\n打卡情况：{notifyResult}\n\n打卡时间: {notifyTime}"""
                 },
             }
             r = requests.post(
