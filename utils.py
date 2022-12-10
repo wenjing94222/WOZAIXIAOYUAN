@@ -69,6 +69,8 @@ class processJson:
     def json_request(self, address):
         url = 'https://apis.map.qq.com/ws/geocoder/v1/?address=' + parse.quote(
             address) + '&key=A3YBZ-NC5RU-MFYVV-BOHND-RO3OT-ABFCR'
+        print(requests.get(url).text)
+    
         jr = json.loads(requests.get(url).text)['result']['location']
         url = 'https://apis.map.qq.com/ws/geocoder/v1/?key=A3YBZ-NC5RU-MFYVV-BOHND-RO3OT-ABFCR&location=' + str(
             jr['lat']) + ',' + str(jr['lng'])
