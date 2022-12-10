@@ -33,7 +33,8 @@ jobs:
       env:
         DD_BOT_ACCESS_TOKEN: ${{secrets.DD_BOT_ACCESS_TOKEN}}
         DD_BOT_SECRET: ${{secrets.DD_BOT_SECRET}}
-        ADDRESS_RECOMMEND: ${{secrets.RECOMMEND}}
+        ADDRESS_RECOMMEND: ${{secrets.ADDRESS_RECOMMEND}}
+        CITY: ${{secrets.CITY}}
       run: python healthcheck.py
 
   # USER_02:
