@@ -66,7 +66,7 @@ class WoZaiXiaoYuanPuncher(utils.Data):
         self.header["JWSESSION"] = self.jwsession
         cur_time = int(round(time.time() * 1000))
         sign_data = {
-            "answers": '["0","1","0"]',  # 在此自定义answers字段
+            "answers": '["0","2","0"]',  # 在此自定义answers字段
             "latitude": self.latitude,
             "longitude": self.longitude,
             "country": self.country,
