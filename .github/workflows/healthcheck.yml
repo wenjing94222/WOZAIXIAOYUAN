@@ -12,7 +12,7 @@ on:
 jobs:
   USER_WJ:
     runs-on: ubuntu-latest
-    environment: WJ_HOME # 填写需要使用的用户配置对应的环境,请自行根据实际情况修改
+    environment: WJ_SCHOOL # 填写需要使用的用户配置对应的环境,请自行根据实际情况修改
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.9
